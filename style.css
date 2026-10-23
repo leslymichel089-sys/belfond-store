@@ -1,0 +1,301 @@
+/* ============================================================
+   Belfond Store — Feuille de style
+   Palette : ivoire chaud, charbon, doré
+   Réalisé par Lesly Tech LLC
+   ============================================================ */
+
+:root {
+  --ivoire: #faf6ef;
+  --ivoire-2: #f3ecdd;
+  --charbon: #211d19;
+  --charbon-2: #35302a;
+  --dore: #b08d2f;
+  --dore-clair: #c9a94e;
+  --texte: #3a352e;
+  --texte-doux: #6f675c;
+  --ligne: #e3d9c6;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "Jost", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--ivoire);
+  color: var(--texte);
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--dore); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.conteneur { width: min(1160px, 92%); margin: 0 auto; }
+
+/* ---------- En-tête ---------- */
+.entete {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(250, 246, 239, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--ligne);
+}
+.entete-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: 0.85rem 0;
+}
+.logo {
+  font-family: var(--serif);
+  font-size: 1.55rem; font-weight: 700; color: var(--charbon);
+  letter-spacing: 0.02em; display: flex; align-items: center; gap: 0.6rem;
+}
+.logo:hover { text-decoration: none; }
+.logo .monogramme {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: 50%;
+  background: var(--charbon); color: var(--dore-clair);
+  font-size: 1.25rem; border: 2px solid var(--dore);
+  flex: none;
+}
+.logo em { color: var(--dore); font-style: normal; }
+nav.principale { display: flex; gap: 1.6rem; flex-wrap: wrap; }
+nav.principale a {
+  color: var(--charbon-2); font-size: 0.98rem; letter-spacing: 0.04em;
+  text-transform: uppercase; font-weight: 500;
+}
+nav.principale a:hover { color: var(--dore); text-decoration: none; }
+
+/* ---------- Hero ---------- */
+.hero {
+  background:
+    radial-gradient(1100px 480px at 85% -10%, rgba(201, 169, 78, 0.18), transparent 60%),
+    linear-gradient(180deg, var(--ivoire) 0%, var(--ivoire-2) 100%);
+  border-bottom: 1px solid var(--ligne);
+  padding: 4.2rem 0 4.6rem;
+  overflow: hidden;
+}
+.hero-grille {
+  display: grid; grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.2rem; align-items: center;
+}
+.sur-titre {
+  text-transform: uppercase; letter-spacing: 0.32em;
+  font-size: 0.78rem; color: var(--dore); font-weight: 600;
+  margin-bottom: 1rem;
+}
+.hero h1 {
+  font-family: var(--serif); font-weight: 800;
+  font-size: clamp(2.9rem, 6vw, 4.4rem);
+  line-height: 1.05; color: var(--charbon);
+  margin-bottom: 1.1rem;
+}
+.hero h1 em { color: var(--dore); font-style: italic; }
+.hero .accroche {
+  font-size: 1.18rem; color: var(--texte-doux);
+  max-width: 34rem; margin-bottom: 2rem;
+}
+.boutons { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+.btn {
+  display: inline-block; padding: 0.85rem 1.7rem; border-radius: 999px;
+  font-weight: 600; letter-spacing: 0.03em; font-size: 1rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.btn:hover { text-decoration: none; transform: translateY(-2px); }
+.btn-or {
+  background: linear-gradient(135deg, var(--dore-clair), var(--dore));
+  color: #fff; box-shadow: 0 8px 20px rgba(176, 141, 47, 0.35);
+}
+.btn-contour {
+  border: 1.5px solid var(--charbon); color: var(--charbon); background: transparent;
+}
+.btn-contour:hover { background: var(--charbon); color: var(--ivoire); }
+
+/* Cadre portrait du hero */
+.cadre-photo { position: relative; max-width: 420px; margin: 0 auto; }
+.cadre-photo::before {
+  content: ""; position: absolute; inset: 0;
+  transform: translate(18px, 18px);
+  border: 2px solid var(--dore); border-radius: 14px;
+}
+.cadre-photo img {
+  position: relative; border-radius: 14px; width: 100%;
+  box-shadow: 0 24px 50px rgba(33, 29, 25, 0.25);
+  aspect-ratio: 4 / 5; object-fit: cover;
+}
+.cadre-photo figcaption {
+  position: relative; margin-top: 1.6rem; text-align: center;
+  font-family: var(--serif); font-style: italic;
+  color: var(--charbon-2); font-size: 1.05rem;
+}
+
+/* ---------- Sections ---------- */
+section.bloc { padding: 4.4rem 0; }
+section.bloc.alt { background: var(--ivoire-2); }
+.titre-section { text-align: center; max-width: 44rem; margin: 0 auto 2.8rem; }
+.titre-section .sur-titre { margin-bottom: 0.6rem; }
+.titre-section h2 {
+  font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.7rem);
+  color: var(--charbon); line-height: 1.15; margin-bottom: 0.7rem;
+}
+.titre-section p { color: var(--texte-doux); }
+.filet {
+  width: 74px; height: 3px; background: var(--dore);
+  margin: 0 auto 1.1rem; border-radius: 2px;
+}
+
+/* Piliers */
+.piliers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.pilier {
+  background: #fff; border: 1px solid var(--ligne); border-radius: 14px;
+  padding: 1.9rem 1.6rem; text-align: center;
+  box-shadow: 0 6px 18px rgba(33, 29, 25, 0.05);
+}
+.pilier .icone {
+  width: 58px; height: 58px; margin: 0 auto 1rem; border-radius: 50%;
+  background: var(--ivoire-2); border: 1.5px solid var(--dore);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; color: var(--dore);
+  font-family: var(--serif); font-weight: 700;
+}
+.pilier h3 { font-family: var(--serif); color: var(--charbon); font-size: 1.3rem; margin-bottom: 0.5rem; }
+.pilier p { color: var(--texte-doux); font-size: 0.98rem; }
+
+/* ---------- Vitrine produits ---------- */
+.vitrine { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.3rem; }
+.carte-produit {
+  background: #fff; border: 1px solid var(--ligne); border-radius: 14px;
+  overflow: hidden; box-shadow: 0 6px 18px rgba(33, 29, 25, 0.05);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.carte-produit:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(33, 29, 25, 0.12); }
+.produit-photo {
+  position: relative; aspect-ratio: 4 / 3; overflow: hidden;
+  background:
+    radial-gradient(300px 200px at 50% 0%, rgba(201, 169, 78, 0.16), transparent 70%),
+    linear-gradient(160deg, #fdfaf3, var(--ivoire-2));
+  display: flex; align-items: center; justify-content: center;
+}
+.produit-photo img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+}
+.attente { text-align: center; color: var(--texte-doux); padding: 1rem; }
+.attente .mono {
+  font-family: var(--serif); font-size: 2rem; color: var(--dore);
+  display: block; line-height: 1;
+}
+.attente .libelle {
+  display: block; margin-top: 0.45rem; font-size: 0.82rem;
+  letter-spacing: 0.22em; text-transform: uppercase;
+}
+.produit-infos { padding: 1rem 1.1rem 1.2rem; text-align: center; }
+.produit-infos h3 { font-family: var(--serif); color: var(--charbon); font-size: 1.12rem; }
+.produit-infos p { color: var(--texte-doux); font-size: 0.92rem; }
+.note-vitrine { text-align: center; color: var(--texte-doux); margin-top: 1.8rem; font-style: italic; }
+
+/* ---------- Propriétaire ---------- */
+.proprio-grille {
+  display: grid; grid-template-columns: 0.8fr 1.2fr;
+  gap: 3rem; align-items: center;
+}
+.proprio-photo { max-width: 380px; margin: 0 auto; position: relative; }
+.proprio-photo::before {
+  content: ""; position: absolute; inset: 0;
+  transform: translate(-16px, 16px);
+  border: 2px solid var(--dore); border-radius: 14px;
+}
+.proprio-photo img {
+  position: relative; border-radius: 14px; width: 100%;
+  aspect-ratio: 1 / 1; object-fit: cover;
+  box-shadow: 0 20px 44px rgba(33, 29, 25, 0.22);
+}
+.proprio-texte h2 {
+  font-family: var(--serif); font-size: clamp(1.9rem, 3.6vw, 2.5rem);
+  color: var(--charbon); margin-bottom: 1rem; line-height: 1.2;
+}
+.proprio-texte p { color: var(--texte); margin-bottom: 1rem; }
+.proprio-texte .signature {
+  font-family: var(--serif); font-style: italic; font-size: 1.25rem; color: var(--dore);
+}
+
+/* ---------- Contact ---------- */
+.contact-grille { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.carte-contact {
+  background: var(--charbon); color: var(--ivoire); border-radius: 14px;
+  padding: 2rem 1.7rem; text-align: center;
+}
+.carte-contact h3 {
+  font-family: var(--serif); color: var(--dore-clair);
+  font-size: 1.25rem; margin-bottom: 0.6rem; letter-spacing: 0.04em;
+}
+.carte-contact p { color: #e9e2d2; font-size: 1rem; word-break: break-word; }
+.carte-contact a { color: var(--ivoire); text-decoration: underline; }
+.carte-contact .btn { margin-top: 0.6rem; }
+
+/* ---------- Pied de page ---------- */
+footer {
+  background: var(--charbon); color: #cfc7b8;
+  padding: 3rem 0 2rem; margin-top: 0;
+}
+.pied-grille {
+  display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem;
+}
+.pied-grille h4 {
+  font-family: var(--serif); color: var(--ivoire); font-size: 1.15rem; margin-bottom: 0.7rem;
+}
+.pied-grille a { color: #cfc7b8; }
+.pied-grille a:hover { color: var(--dore-clair); }
+.pied-grille ul { list-style: none; }
+.pied-grille li { margin-bottom: 0.4rem; }
+.pied-bas {
+  border-top: 1px solid #453f36; padding-top: 1.4rem;
+  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  font-size: 0.92rem;
+}
+.realisation { color: #9a917e; font-size: 0.88rem; }
+.realisation a { color: #b6ad9a; }
+
+/* ---------- Pages légales ---------- */
+.legal { padding: 3.6rem 0 4.4rem; }
+.legal .conteneur { max-width: 860px; }
+.legal h1 {
+  font-family: var(--serif); color: var(--charbon);
+  font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.15; margin-bottom: 0.6rem;
+}
+.legal .maj { color: var(--texte-doux); font-style: italic; margin-bottom: 2.2rem; }
+.legal h2 {
+  font-family: var(--serif); color: var(--charbon);
+  font-size: 1.45rem; margin: 2rem 0 0.7rem;
+}
+.legal p, .legal li { color: var(--texte); margin-bottom: 0.8rem; }
+.legal ul { padding-left: 1.3rem; margin-bottom: 1rem; }
+.legal .encadre {
+  background: #fff; border: 1px solid var(--ligne); border-left: 4px solid var(--dore);
+  border-radius: 8px; padding: 1.2rem 1.4rem; margin: 1.6rem 0;
+}
+
+/* ---------- Révélation au défilement ---------- */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .vitrine { grid-template-columns: repeat(2, 1fr); }
+  .piliers, .contact-grille { grid-template-columns: 1fr; }
+  .hero-grille, .proprio-grille { grid-template-columns: 1fr; }
+  .hero { padding: 3rem 0 3.4rem; }
+  .pied-grille { grid-template-columns: 1fr; }
+  nav.principale { gap: 1rem; }
+  nav.principale a { font-size: 0.88rem; }
+}
+@media (max-width: 520px) {
+  .vitrine { grid-template-columns: 1fr; }
+  .entete-inner { flex-direction: column; gap: 0.5rem; }
+}
