@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ht">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Belfond Store — Boutique à Christ-Roi, Port-au-Prince</title>
-  <meta name="description" content="Belfond Store, boutique de quartier à Christ-Roi, Rue Lamartine #13A, Port-au-Prince (Haïti). Produits du quotidien, sélection de qualité, accueil chaleureux. Une boutique d'Esterlande Belfond.">
+  <title data-i18n-title="title.accueil">Belfond Store — Boutik nan Christ-Roi, Pòtoprens</title>
+  <meta name="description" data-i18n-content="desc.accueil" content="Belfond Store, boutik katye nan Christ-Roi, Ri Lamartine #13A, Pòtoprens (Ayiti). Pwodwi pou chak jou, seleksyon kalite, akèy cho. Yon boutik Esterlande Belfond.">
+  <script>
+    // Tèm + lang chwazi yo aplike touswit, anvan paj la parèt (evite klere)
+    (function () {
+      try {
+        var t = localStorage.getItem("belfond-theme");
+        document.documentElement.setAttribute("data-theme", t === "dark" ? "dark" : "light");
+        var l = localStorage.getItem("belfond-lang");
+        if (l === "fr") document.documentElement.lang = "fr";
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,249 +34,247 @@
         Belfond <em>Store</em>
       </a>
       <nav class="principale">
-        <a href="#boutique">Notre boutique</a>
-        <a href="#produits">Nos produits</a>
-        <a href="#proprietaire">La propriétaire</a>
-        <a href="#contact">Contact</a>
+        <a href="#boutique" data-i18n="nav.boutique">Boutik nou an</a>
+        <a href="#produits" data-i18n="nav.produits">Pwodwi nou yo</a>
+        <a href="#proprietaire" data-i18n="nav.proprio">Pwopriyetè a</a>
+        <a href="#contact" data-i18n="nav.contact">Kontak</a>
       </nav>
+      <div class="controles">
+        <div class="lang-switch" role="group" aria-label="Lang / Langue">
+          <button type="button" class="lang-btn actif" data-lang="ht" aria-pressed="true">Kreyòl</button>
+          <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
+        </div>
+        <button type="button" class="theme-btn" data-i18n-aria="theme.label" aria-label="Chanje tèm (klè / fonse)">🌙</button>
+      </div>
     </div>
   </header>
+
+  <!-- ================= Barre d'info : lieu, date, heure, météo ================= -->
+  <div class="barre-info">
+    <div class="conteneur barre-info-inner">
+      <span class="lieu">📍 <span data-i18n="bar.lieu">Pòtoprens, Ayiti</span></span>
+      <span class="moment">🕐 <span id="date-live">—</span> · <span class="heure" id="heure-live">--:--:--</span></span>
+      <span class="meteo" id="meteo-live">—</span>
+    </div>
+  </div>
 
   <!-- ================= Hero ================= -->
   <section class="hero">
     <div class="conteneur hero-grille">
       <div class="reveal">
-        <p class="sur-titre">Christ-Roi · Port-au-Prince · Haïti</p>
-        <h1>Bienvenue chez<br><em>Belfond Store</em></h1>
-        <p class="accroche">
-          Votre boutique de quartier à Christ-Roi : des produits du quotidien,
-          une sélection de qualité et un accueil chaleureux, chaque jour.
-          Passez nous voir — vous êtes ici chez vous.
+        <span class="badge-lieu" data-i18n="hero.surtitre">Christ-Roi · Pòtoprens · Ayiti</span>
+        <h1 data-i18n-html="hero.titre">Byenvini nan<br><em>Belfond Store</em></h1>
+        <p class="accroche" data-i18n="hero.accroche">
+          Boutik katye w nan Christ-Roi : pwodwi pou chak jou, yon seleksyon
+          kalite epi yon akèy cho, chak jou. Pase wè nou — isit la, ou lakay ou.
         </p>
         <div class="boutons">
-          <a class="btn btn-or" href="#produits">Découvrir la vitrine</a>
-          <a class="btn btn-contour" href="mailto:esterlandbelfond3@gmail.com">Nous écrire</a>
+          <a class="btn btn-or" href="#produits" data-i18n="hero.btn1">Dekouvri vitrin lan</a>
+          <a class="btn btn-contour" href="mailto:esterlandbelfond3@gmail.com" data-i18n="hero.btn2">Ekri nou</a>
         </div>
       </div>
       <figure class="cadre-photo reveal">
-        <img src="assets/proprietaire.jpg" alt="Mme Esterlande Belfond, propriétaire de Belfond Store">
-        <figcaption>Mme Esterlande Belfond, fondatrice de Belfond Store</figcaption>
+        <img src="assets/proprietaire.jpg" data-i18n-alt="hero.alt" alt="Madan Esterlande Belfond, pwopriyetè Belfond Store">
+        <figcaption data-i18n="hero.caption">Madan Esterlande Belfond, pwopriyetè Belfond Store</figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- ================= Notre boutique ================= -->
+  <!-- ================= Boutik nou an ================= -->
   <section class="bloc" id="boutique">
     <div class="conteneur">
       <div class="titre-section reveal">
         <div class="filet"></div>
-        <p class="sur-titre">Notre boutique</p>
-        <h2>Une adresse de confiance, au cœur de Christ-Roi</h2>
-        <p>
-          Située à la Rue Lamartine #13A, Belfond Store sert les familles du
-          quartier avec soin et bonne humeur. Ici, chaque cliente et chaque
-          client est accueilli par son nom, conseillé avec attention et servi
-          avec le sourire.
+        <p class="sur-titre" data-i18n="boutique.surtitre">Boutik nou an</p>
+        <h2 data-i18n="boutique.titre">Yon adrès konfyans nan kè Christ-Roi</h2>
+        <p data-i18n="boutique.intro">
+          Belfond Store chita nan Ri Lamartine #13A ; li sèvi fanmi katye a ak
+          swen epi ak kè kontan. Isit la, yo resevwa chak kliyan pa non l, yo
+          ba l bon konsèy ak atansyon epi yo sèvi l ak yon souri.
         </p>
       </div>
       <div class="piliers">
         <article class="pilier reveal">
           <div class="icone">✦</div>
-          <h3>Sélection de qualité</h3>
-          <p>Des produits du quotidien choisis avec exigence, pour leur qualité et leur utilité réelle dans vos foyers.</p>
+          <h3 data-i18n="pilier1.titre">Seleksyon kalite</h3>
+          <p data-i18n="pilier1.texte">Pwodwi pou chak jou nou chwazi ak egzijans, pou kalite yo ak pou jan yo itil reyèlman nan fwaye nou yo.</p>
         </article>
         <article class="pilier reveal">
           <div class="icone">❋</div>
-          <h3>Accueil chaleureux</h3>
-          <p>Une boutique à taille humaine, où l'on prend le temps de vous écouter et de vous conseiller honnêtement.</p>
+          <h3 data-i18n="pilier2.titre">Akèy cho</h3>
+          <p data-i18n="pilier2.texte">Yon boutik gwosè moun, kote nou pran tan koute w epi ba w konsèy onèt.</p>
         </article>
         <article class="pilier reveal">
           <div class="icone">✧</div>
-          <h3>Service de proximité</h3>
-          <p>À deux pas de chez vous, à Christ-Roi. Une question, un besoin particulier ? Écrivez-nous, nous répondons vite.</p>
+          <h3 data-i18n="pilier3.titre">Sèvis pwoksimite</h3>
+          <p data-i18n="pilier3.texte">A de pa lakay ou, nan Christ-Roi. Yon kesyon, yon bezwen espesyal ? Ekri nou, n ap reponn ou vit.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ================= Nos produits / Vitrine ================= -->
+  <!-- ================= Pwodwi nou yo / Vitrine ================= -->
   <section class="bloc alt" id="produits">
     <div class="conteneur">
       <div class="titre-section reveal">
         <div class="filet"></div>
-        <p class="sur-titre">Vitrine</p>
-        <h2>Nos produits</h2>
-        <p>
-          Un aperçu de ce que vous trouverez en boutique. Notre sélection
-          évolue au fil des arrivages : passez régulièrement nous voir !
+        <p class="sur-titre" data-i18n="produits.surtitre">Vitrin</p>
+        <h2 data-i18n="produits.titre">Pwodwi nou yo</h2>
+        <p data-i18n="produits.intro">
+          Yon ti gou sou sa w ap jwenn nan boutik la. Seleksyon nou an chanje
+          selon arivay yo : pase wè nou souvan !
         </p>
       </div>
 
       <div class="vitrine">
-        <!-- Les photographies des produits seront déposées dans assets/produits/ -->
+        <!-- Foto pwodwi yo pral depoze nan assets/produits/ -->
         <article class="carte-produit reveal">
           <div class="produit-photo">
-            <div class="attente"><span class="mono">B</span><span class="libelle">Photo à venir</span></div>
-            <img src="assets/produits/produits-1.jpg" alt="Produit de Belfond Store" loading="lazy" onerror="this.remove()">
+            <div class="attente"><span class="mono">B</span><span class="libelle" data-i18n="produit.attente">Foto ap vini</span></div>
+            <img src="assets/produits/produits-1.jpg" data-i18n-alt="produit.alt" alt="Pwodwi Belfond Store" loading="lazy" onerror="this.remove()">
           </div>
-          <div class="produit-infos"><h3>Sélection de la boutique</h3><p>À découvrir en magasin</p></div>
+          <div class="produit-infos"><h3 data-i18n="produit.titre">Seleksyon boutik la</h3><p data-i18n="produit.sous">Pou w dekouvri an magazen</p></div>
         </article>
         <article class="carte-produit reveal">
           <div class="produit-photo">
-            <div class="attente"><span class="mono">B</span><span class="libelle">Photo à venir</span></div>
-            <img src="assets/produits/produits-2.jpg" alt="Produit de Belfond Store" loading="lazy" onerror="this.remove()">
+            <div class="attente"><span class="mono">B</span><span class="libelle" data-i18n="produit.attente">Foto ap vini</span></div>
+            <img src="assets/produits/produits-2.jpg" data-i18n-alt="produit.alt" alt="Pwodwi Belfond Store" loading="lazy" onerror="this.remove()">
           </div>
-          <div class="produit-infos"><h3>Sélection de la boutique</h3><p>À découvrir en magasin</p></div>
+          <div class="produit-infos"><h3 data-i18n="produit.titre">Seleksyon boutik la</h3><p data-i18n="produit.sous">Pou w dekouvri an magazen</p></div>
         </article>
         <article class="carte-produit reveal">
           <div class="produit-photo">
-            <div class="attente"><span class="mono">B</span><span class="libelle">Photo à venir</span></div>
-            <img src="assets/produits/produits-3.jpg" alt="Produit de Belfond Store" loading="lazy" onerror="this.remove()">
+            <div class="attente"><span class="mono">B</span><span class="libelle" data-i18n="produit.attente">Foto ap vini</span></div>
+            <img src="assets/produits/produits-3.jpg" data-i18n-alt="produit.alt" alt="Pwodwi Belfond Store" loading="lazy" onerror="this.remove()">
           </div>
-          <div class="produit-infos"><h3>Sélection de la boutique</h3><p>À découvrir en magasin</p></div>
+          <div class="produit-infos"><h3 data-i18n="produit.titre">Seleksyon boutik la</h3><p data-i18n="produit.sous">Pou w dekouvri an magazen</p></div>
         </article>
         <article class="carte-produit reveal">
           <div class="produit-photo">
-            <div class="attente"><span class="mono">B</span><span class="libelle">Photo à venir</span></div>
-            <img src="assets/produits/produits-4.jpg" alt="Produit de Belfond Store" loading="lazy" onerror="this.remove()">
+            <div class="attente"><span class="mono">B</span><span class="libelle" data-i18n="produit.attente">Foto ap vini</span></div>
+            <img src="assets/produits/produits-4.jpg" data-i18n-alt="produit.alt" alt="Pwodwi Belfond Store" loading="lazy" onerror="this.remove()">
           </div>
-          <div class="produit-infos"><h3>Sélection de la boutique</h3><p>À découvrir en magasin</p></div>
+          <div class="produit-infos"><h3 data-i18n="produit.titre">Seleksyon boutik la</h3><p data-i18n="produit.sous">Pou w dekouvri an magazen</p></div>
         </article>
         <article class="carte-produit reveal">
           <div class="produit-photo">
-            <div class="attente"><span class="mono">B</span><span class="libelle">Photo à venir</span></div>
-            <img src="assets/produits/produits-5.jpg" alt="Produit de Belfond Store" loading="lazy" onerror="this.remove()">
+            <div class="attente"><span class="mono">B</span><span class="libelle" data-i18n="produit.attente">Foto ap vini</span></div>
+            <img src="assets/produits/produits-5.jpg" data-i18n-alt="produit.alt" alt="Pwodwi Belfond Store" loading="lazy" onerror="this.remove()">
           </div>
-          <div class="produit-infos"><h3>Sélection de la boutique</h3><p>À découvrir en magasin</p></div>
+          <div class="produit-infos"><h3 data-i18n="produit.titre">Seleksyon boutik la</h3><p data-i18n="produit.sous">Pou w dekouvri an magazen</p></div>
         </article>
         <article class="carte-produit reveal">
           <div class="produit-photo">
-            <div class="attente"><span class="mono">B</span><span class="libelle">Photo à venir</span></div>
-            <img src="assets/produits/produits-6.jpg" alt="Produit de Belfond Store" loading="lazy" onerror="this.remove()">
+            <div class="attente"><span class="mono">B</span><span class="libelle" data-i18n="produit.attente">Foto ap vini</span></div>
+            <img src="assets/produits/produits-6.jpg" data-i18n-alt="produit.alt" alt="Pwodwi Belfond Store" loading="lazy" onerror="this.remove()">
           </div>
-          <div class="produit-infos"><h3>Sélection de la boutique</h3><p>À découvrir en magasin</p></div>
+          <div class="produit-infos"><h3 data-i18n="produit.titre">Seleksyon boutik la</h3><p data-i18n="produit.sous">Pou w dekouvri an magazen</p></div>
         </article>
         <article class="carte-produit reveal">
           <div class="produit-photo">
-            <div class="attente"><span class="mono">B</span><span class="libelle">Photo à venir</span></div>
-            <img src="assets/produits/produits-7.jpg" alt="Produit de Belfond Store" loading="lazy" onerror="this.remove()">
+            <div class="attente"><span class="mono">B</span><span class="libelle" data-i18n="produit.attente">Foto ap vini</span></div>
+            <img src="assets/produits/produits-7.jpg" data-i18n-alt="produit.alt" alt="Pwodwi Belfond Store" loading="lazy" onerror="this.remove()">
           </div>
-          <div class="produit-infos"><h3>Sélection de la boutique</h3><p>À découvrir en magasin</p></div>
+          <div class="produit-infos"><h3 data-i18n="produit.titre">Seleksyon boutik la</h3><p data-i18n="produit.sous">Pou w dekouvri an magazen</p></div>
         </article>
         <article class="carte-produit reveal">
           <div class="produit-photo">
-            <div class="attente"><span class="mono">B</span><span class="libelle">Photo à venir</span></div>
-            <img src="assets/produits/produits-8.jpg" alt="Produit de Belfond Store" loading="lazy" onerror="this.remove()">
+            <div class="attente"><span class="mono">B</span><span class="libelle" data-i18n="produit.attente">Foto ap vini</span></div>
+            <img src="assets/produits/produits-8.jpg" data-i18n-alt="produit.alt" alt="Pwodwi Belfond Store" loading="lazy" onerror="this.remove()">
           </div>
-          <div class="produit-infos"><h3>Sélection de la boutique</h3><p>À découvrir en magasin</p></div>
+          <div class="produit-infos"><h3 data-i18n="produit.titre">Seleksyon boutik la</h3><p data-i18n="produit.sous">Pou w dekouvri an magazen</p></div>
         </article>
       </div>
 
-      <p class="note-vitrine reveal">Les photographies de nos produits arrivent très bientôt. En attendant, toute la sélection vous attend en boutique, Rue Lamartine #13A.</p>
+      <p class="note-vitrine reveal" data-i18n="produits.note">Foto pwodwi nou yo ap rive trè byento. Antretan, tout seleksyon an ap tann ou nan boutik la, Ri Lamartine #13A.</p>
     </div>
   </section>
 
-  <!-- ================= La propriétaire ================= -->
+  <!-- ================= Pwopriyetè a ================= -->
   <section class="bloc" id="proprietaire">
     <div class="conteneur proprio-grille">
       <div class="proprio-photo reveal">
-        <img src="assets/proprietaire-carre.jpg" alt="Portrait de Mme Esterlande Belfond">
+        <img src="assets/proprietaire-carre.jpg" data-i18n-alt="proprio.alt" alt="Foto Madan Esterlande Belfond">
       </div>
       <div class="proprio-texte reveal">
-        <p class="sur-titre">La propriétaire</p>
-        <h2>Esterlande Belfond, une commerçante au service de son quartier</h2>
-        <p>
-          Derrière Belfond Store, il y a une femme de conviction :
-          Mme Esterlande Belfond. Commerçante passionnée, elle a ouvert sa
-          boutique à Christ-Roi avec une idée simple — offrir aux familles du
-          quartier des produits du quotidien de qualité, à un endroit où l'on
-          se sent bien accueilli.
+        <p class="sur-titre" data-i18n="proprio.surtitre">Pwopriyetè a</p>
+        <h2 data-i18n="proprio.titre">Esterlande Belfond, yon komèsan nan sèvis katye l</h2>
+        <p data-i18n="proprio.p1">
+          Dèyè Belfond Store, gen yon fanm konviksyon : Madan Esterlande
+          Belfond. Li se yon komèsan ki gen pasyon ; li louvri boutik li nan
+          Christ-Roi ak yon lide senp — ofri fanmi katye a pwodwi pou chak jou
+          ki gen kalite, nan yon kote moun santi yo byen resevwa.
         </p>
-        <p>
-          Son exigence : la qualité. Sa signature : le sourire et l'écoute.
-          Passez la saluer en boutique, elle se fera un plaisir de vous
-          conseiller.
+        <p data-i18n="proprio.p2">
+          Egzijans li : kalite. Sinati l : souri ak ekout. Pase salye l nan
+          boutik la, sa ap fè l plezi ba w konsèy.
         </p>
-        <p class="signature">— Esterlande Belfond, fondatrice</p>
+        <p class="signature" data-i18n="proprio.signature">— Esterlande Belfond, fondatris</p>
       </div>
     </div>
   </section>
 
-  <!-- ================= Contact ================= -->
+  <!-- ================= Kontak ================= -->
   <section class="bloc alt" id="contact">
     <div class="conteneur">
       <div class="titre-section reveal">
         <div class="filet"></div>
-        <p class="sur-titre">Contact</p>
-        <h2>Passer nous voir, ou nous écrire</h2>
-        <p>Nous sommes à votre service à Christ-Roi. Pour toute question sur un produit ou une disponibilité, écrivez-nous : nous répondons avec plaisir.</p>
+        <p class="sur-titre" data-i18n="contact.surtitre">Kontak</p>
+        <h2 data-i18n="contact.titre">Pase wè nou, oswa ekri nou</h2>
+        <p data-i18n="contact.intro">Nou nan sèvis ou nan Christ-Roi. Pou nenpòt kesyon sou yon pwodwi oswa sou yon disponiblite, ekri nou : n ap reponn ou ak plezi.</p>
       </div>
       <div class="contact-grille">
         <article class="carte-contact reveal">
-          <h3>Adresse</h3>
-          <p>Belfond Store<br>Christ-Roi, Rue Lamartine #13A<br>Port-au-Prince, Haïti</p>
+          <h3 data-i18n="contact.adr.titre">Adrès</h3>
+          <p data-i18n-html="contact.adr.texte">Belfond Store<br>Christ-Roi, Ri Lamartine #13A<br>Pòtoprens, Ayiti</p>
         </article>
         <article class="carte-contact reveal">
-          <h3>Courriel</h3>
+          <h3 data-i18n="contact.imel.titre">Kouryèl</h3>
           <p><a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a></p>
-          <a class="btn btn-or" href="mailto:esterlandbelfond3@gmail.com?subject=Question%20pour%20Belfond%20Store">Nous écrire</a>
+          <a class="btn btn-or" href="mailto:esterlandbelfond3@gmail.com?subject=Kesyon%20pou%20Belfond%20Store" data-i18n="contact.btn">Ekri nou</a>
         </article>
         <article class="carte-contact reveal">
-          <h3>La boutique</h3>
-          <p>Produits du quotidien et sélection de qualité, au service des familles de Christ-Roi et des environs.</p>
+          <h3 data-i18n="contact.boutik.titre">Boutik la</h3>
+          <p data-i18n="contact.boutik.texte">Pwodwi pou chak jou epi yon seleksyon kalite, nan sèvis fanmi Christ-Roi ak alantou l yo.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ================= Pied de page ================= -->
+  <!-- ================= Pye paj ================= -->
   <footer>
     <div class="conteneur">
       <div class="pied-grille">
         <div>
           <h4>Belfond Store</h4>
-          <p>Boutique de quartier à Christ-Roi, Rue Lamartine #13A, Port-au-Prince, Haïti. Des produits du quotidien, une sélection de qualité, un accueil chaleureux.</p>
+          <p data-i18n="pied.desc">Boutik katye nan Christ-Roi, Ri Lamartine #13A, Pòtoprens, Ayiti. Pwodwi pou chak jou, yon seleksyon kalite, yon akèy cho.</p>
         </div>
         <div>
-          <h4>Navigation</h4>
+          <h4 data-i18n="pied.nav">Navigasyon</h4>
           <ul>
-            <li><a href="#boutique">Notre boutique</a></li>
-            <li><a href="#produits">Nos produits</a></li>
-            <li><a href="#proprietaire">La propriétaire</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#boutique" data-i18n="nav.boutique">Boutik nou an</a></li>
+            <li><a href="#produits" data-i18n="nav.produits">Pwodwi nou yo</a></li>
+            <li><a href="#proprietaire" data-i18n="nav.proprio">Pwopriyetè a</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Kontak</a></li>
           </ul>
         </div>
         <div>
-          <h4>Informations légales</h4>
+          <h4 data-i18n="pied.legal">Enfòmasyon legal</h4>
           <ul>
-            <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
-            <li><a href="propriete-intellectuelle.html">Propriété intellectuelle</a></li>
+            <li><a href="politique-confidentialite.html" data-i18n="pied.conf">Politik konfidansyalite</a></li>
+            <li><a href="propriete-intellectuelle.html" data-i18n="pied.pi">Pwopriyete entelektyèl</a></li>
             <li><a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a></li>
           </ul>
         </div>
       </div>
       <div class="pied-bas">
-        <span>© 2026 Esterlande Belfond — Belfond Store. Tous droits réservés.</span>
-        <span class="realisation">Site réalisé par <a href="https://lesly-tech-llc.onrender.com" target="_blank" rel="noopener">Lesly Tech LLC</a></span>
+        <span data-i18n="pied.droits">© 2026 Esterlande Belfond — Belfond Store. Tout dwa rezève.</span>
+        <span class="realisation" data-i18n-html="pied.realis">Sit la se travay <a href="https://lesly-tech-llc.onrender.com" target="_blank" rel="noopener">Lesly Tech LLC</a></span>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Révélation douce des sections au défilement
-    (function () {
-      var els = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window)) {
-        els.forEach(function (e) { e.classList.add('visible'); });
-        return;
-      }
-      var obs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); }
-        });
-      }, { threshold: 0.12 });
-      els.forEach(function (e) { obs.observe(e); });
-    })();
-  </script>
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

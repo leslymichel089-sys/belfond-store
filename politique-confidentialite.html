@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ht">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Politique de confidentialité — Belfond Store</title>
-  <meta name="description" content="Politique de confidentialité du site de Belfond Store (Christ-Roi, Port-au-Prince, Haïti) : données collectées, utilisation, droits des visiteurs.">
+  <title data-i18n-title="title.conf">Politik konfidansyalite — Belfond Store</title>
+  <meta name="description" data-i18n-content="desc.conf" content="Politik konfidansyalite sit Belfond Store la (Christ-Roi, Pòtoprens, Ayiti) : done nou kolekte, ki jan nou itilize yo, dwa vizitè yo.">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("belfond-theme");
+        document.documentElement.setAttribute("data-theme", t === "dark" ? "dark" : "light");
+        var l = localStorage.getItem("belfond-lang");
+        if (l === "fr") document.documentElement.lang = "fr";
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,125 +32,133 @@
         Belfond <em>Store</em>
       </a>
       <nav class="principale">
-        <a href="index.html#boutique">Notre boutique</a>
-        <a href="index.html#produits">Nos produits</a>
-        <a href="index.html#proprietaire">La propriétaire</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html#boutique" data-i18n="nav.boutique">Boutik nou an</a>
+        <a href="index.html#produits" data-i18n="nav.produits">Pwodwi nou yo</a>
+        <a href="index.html#proprietaire" data-i18n="nav.proprio">Pwopriyetè a</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Kontak</a>
       </nav>
+      <div class="controles">
+        <div class="lang-switch" role="group" aria-label="Lang / Langue">
+          <button type="button" class="lang-btn actif" data-lang="ht" aria-pressed="true">Kreyòl</button>
+          <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
+        </div>
+        <button type="button" class="theme-btn" data-i18n-aria="theme.label" aria-label="Chanje tèm (klè / fonse)">🌙</button>
+      </div>
     </div>
   </header>
 
+  <div class="barre-info">
+    <div class="conteneur barre-info-inner">
+      <span class="lieu">📍 <span data-i18n="bar.lieu">Pòtoprens, Ayiti</span></span>
+      <span class="moment">🕐 <span id="date-live">—</span> · <span class="heure" id="heure-live">--:--:--</span></span>
+      <span class="meteo" id="meteo-live">—</span>
+    </div>
+  </div>
+
   <main class="legal">
     <div class="conteneur">
-      <p class="sur-titre">Informations légales</p>
-      <h1>Politique de confidentialité</h1>
-      <p class="maj">Dernière mise à jour : 22 octobre 2026</p>
+      <p class="sur-titre" data-i18n="legal.surtitre">Enfòmasyon legal</p>
+      <h1 data-i18n="conf.titre">Politik konfidansyalite</h1>
+      <p class="maj" data-i18n="conf.maj">Dènye mizajou : 22 oktòb 2026</p>
 
-      <p>
-        La présente politique de confidentialité décrit la manière dont
-        <strong>Belfond Store</strong> (Christ-Roi, Rue Lamartine #13A,
-        Port-au-Prince, Haïti), représentée par sa propriétaire
-        <strong>Mme Esterlande Belfond</strong>, traite les informations
-        relatives aux visiteurs de son site web (ci-après « le Site »).
-        En utilisant le Site, vous acceptez les pratiques décrites ci-dessous.
+      <p data-i18n-html="conf.intro">
+        Politik konfidansyalite sa a dekri ki jan <strong>Belfond Store</strong>
+        (Christ-Roi, Ri Lamartine #13A, Pòtoprens, Ayiti), ke pwopriyetè li
+        <strong>Madan Esterlande Belfond</strong> reprezante, trete enfòmasyon
+        ki konsène vizitè sit wèb li a (ki pral rele « Sit la »). Lè w itilize
+        Sit la, ou dakò ak pratik ki dekri anba yo.
       </p>
 
-      <h2>1. Responsable du traitement</h2>
-      <p>
-        La responsable du traitement des données est Mme Esterlande Belfond,
-        propriétaire de Belfond Store. Pour toute question relative à la
-        présente politique ou à vos données personnelles, vous pouvez la
-        contacter à l'adresse suivante :
+      <h2 data-i18n="conf.h1">1. Responsab tretman an</h2>
+      <p data-i18n-html="conf.p1">
+        Responsab tretman done yo se Madan Esterlande Belfond, pwopriyetè
+        Belfond Store. Pou nenpòt kesyon sou politik sa a oswa sou done
+        pèsonèl ou, ou ka ekri l nan adrès sa a :
         <a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a>.
       </p>
 
-      <h2>2. Données que nous collectons</h2>
-      <p>Le Site est un site vitrine : il ne comporte ni compte utilisateur, ni panier d'achat, ni formulaire d'inscription. En conséquence, nous collectons très peu de données :</p>
+      <h2 data-i18n="conf.h2">2. Done nou kolekte</h2>
+      <p data-i18n="conf.p2">Sit la se yon sit vitrin : li pa gen kont itilizatè, ni panyen acha, ni fòmilè enskripsyon. Kidonk, nou kolekte trè piti done :</p>
       <ul>
-        <li><strong>Correspondances par courriel.</strong> Lorsque vous nous écrivez à l'adresse esterlandbelfond3@gmail.com, nous recevons votre adresse courriel ainsi que le contenu de votre message (votre nom si vous le mentionnez, votre demande, etc.).</li>
-        <li><strong>Données techniques de navigation.</strong> Comme tout site web, l'hébergeur du Site peut enregistrer automatiquement des informations techniques (adresse IP, type de navigateur, pages consultées, date et heure de visite) dans des journaux de serveur, à des fins de sécurité et de statistiques de fréquentation anonymes.</li>
+        <li data-i18n-html="conf.li2a"><strong>Korespondans pa kouryèl.</strong> Lè w ekri nou nan adrès esterlandbelfond3@gmail.com, nou resevwa adrès kouryèl ou ansanm ak sa ki nan mesaj ou a (non w si w mansyone l, demann ou, elatriye).</li>
+        <li data-i18n-html="conf.li2b"><strong>Done teknik navigasyon.</strong> Menm jan ak tout sit wèb, ebèjè Sit la kapab anrejistre otomatikman enfòmasyon teknik (adrès IP, tip navigatè, paj ou vizite, dat ak lè vizit la) nan jounal sèvè, pou sekirite epi pou estatistik vizit anonim.</li>
       </ul>
-      <p>Nous ne collectons aucune donnée bancaire, aucun mot de passe et aucune donnée sensible par l'intermédiaire du Site.</p>
+      <p data-i18n="conf.p2b">Nou pa kolekte okenn done labank, okenn modpas epi okenn done sansib atravè Sit la.</p>
 
-      <h2>3. Utilisation de vos données</h2>
-      <p>Les informations que vous nous transmettez sont utilisées uniquement pour :</p>
+      <h2 data-i18n="conf.h3">3. Ki jan nou itilize done w yo</h2>
+      <p data-i18n="conf.p3">Enfòmasyon ou voye ba nou yo sèvi sèlman pou :</p>
       <ul>
-        <li>répondre à vos messages et à vos demandes concernant la boutique et ses produits ;</li>
-        <li>assurer le bon fonctionnement, la sécurité et l'amélioration du Site.</li>
+        <li data-i18n="conf.li3a">reponn mesaj ou yo ak demann ou yo sou boutik la ak pwodwi l yo ;</li>
+        <li data-i18n="conf.li3b">asire Sit la fonksyone byen, sekirite l epi amelyorasyon l.</li>
       </ul>
-      <p>
-        Vos données ne sont <strong>jamais vendues, louées ni cédées</strong> à
-        des tiers à des fins commerciales ou publicitaires.
+      <p data-i18n-html="conf.p3b">
+        Nou <strong>pa janm vann, lwe ni bay</strong> done w yo bay lòt moun
+        pou rezon komèsyal oswa piblisite.
       </p>
 
-      <h2>4. Cookies et traçage</h2>
+      <h2 data-i18n="conf.h4">4. Bonbon (cookies) ak trasay</h2>
       <div class="encadre">
-        <p>
-          Le Site n'utilise <strong>aucun cookie de traçage publicitaire</strong>
-          et aucun outil d'analyse comportementale. Les seules ressources
-          externes chargées sont des polices de caractères (Google Fonts),
-          qui peuvent entraîner la transmission de votre adresse IP au
-          fournisseur concerné lors de l'affichage des pages.
+        <p data-i18n-html="conf.enc4">
+          Sit la pa itilize <strong>okenn bonbon trasay piblisite</strong> epi
+          okenn zouti analiz konpòtman. Sèl resous deyò ki chaje se polis
+          karaktè (Google Fonts), ki kapab fè adrès IP ou ale jwenn founisè a
+          lè paj yo ap parèt.
         </p>
       </div>
 
-      <h2>5. Conservation des données</h2>
-      <p>
-        Les courriels reçus sont conservés le temps nécessaire au traitement de
-        votre demande, puis archivés ou supprimés dans un délai raisonnable.
-        Les journaux techniques de l'hébergeur sont conservés conformément
-        aux pratiques standard de sécurité.
+      <h2 data-i18n="conf.h5">5. Konbyen tan nou kenbe done yo</h2>
+      <p data-i18n="conf.p5">
+        Nou kenbe kouryèl nou resevwa yo pandan tan ki nesesè pou trete demann
+        ou a, apre sa nou achive yo oswa nou efase yo nan yon delè rezonab.
+        Ebèjè a kenbe jounal teknik li yo selon pratik sekirite estanda yo.
       </p>
 
-      <h2>6. Partage avec des tiers</h2>
-      <p>
-        Vos données ne sont partagées avec aucun tiers, sauf : (a) avec les
-        prestataires techniques indispensables au fonctionnement du Site
-        (hébergeur, messagerie électronique), dans la limite de leurs
-        fonctions ; ou (b) si la loi l'exige.
+      <h2 data-i18n="conf.h6">6. Pataj ak lòt moun</h2>
+      <p data-i18n="conf.p6">
+        Nou pa pataje done w yo ak okenn lòt moun, sof : (a) ak founisè teknik
+        ki endispansab pou Sit la fonksyone (ebèjè, sèvis kouryèl), nan limit
+        fonksyon yo ; oswa (b) si lalwa mande sa.
       </p>
 
-      <h2>7. Vos droits</h2>
-      <p>Vous disposez, à l'égard de vos données personnelles, des droits suivants :</p>
+      <h2 data-i18n="conf.h7">7. Dwa w yo</h2>
+      <p data-i18n="conf.p7">Ou gen dwa sa yo sou done pèsonèl ou :</p>
       <ul>
-        <li>droit d'accès : savoir quelles données nous détenons sur vous ;</li>
-        <li>droit de rectification : faire corriger des données inexactes ;</li>
-        <li>droit à l'effacement : demander la suppression de vos données et de vos courriels ;</li>
-        <li>droit d'opposition : vous opposer à tout traitement de vos données.</li>
+        <li data-i18n="conf.li7a">dwa aksè : konnen ki done nou gen sou ou ;</li>
+        <li data-i18n="conf.li7b">dwa retifikasyon : fè korije done ki pa egzak ;</li>
+        <li data-i18n="conf.li7c">dwa efasman : mande pou yo efase done w yo ak kouryèl ou yo ;</li>
+        <li data-i18n="conf.li7d">dwa opozisyon : opoze w ak nenpòt tretman done w yo.</li>
       </ul>
-      <p>
-        Pour exercer ces droits, écrivez simplement à
+      <p data-i18n-html="conf.p7b">
+        Pou w egzèse dwa sa yo, ekri senpleman nan
         <a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a>.
-        Nous répondrons dans les meilleurs délais.
+        N ap reponn ou nan pi bon delè.
       </p>
 
-      <h2>8. Sécurité</h2>
-      <p>
-        Nous mettons en œuvre des mesures raisonnables pour protéger les
-        informations reçues. Toutefois, aucune transmission par Internet
-        n'étant totalement exempte de risques, nous vous invitons à ne jamais
-        transmettre par courriel d'informations hautement sensibles
-        (mots de passe, coordonnées bancaires complètes, etc.).
+      <h2 data-i18n="conf.h8">8. Sekirite</h2>
+      <p data-i18n="conf.p8">
+        Nou mete mezi rezonab an plas pou pwoteje enfòmasyon nou resevwa yo.
+        Sepandan, kòm okenn transmisyon sou Entènèt pa konplètman san ris,
+        nou envite w pa janm voye enfòmasyon ki trè sansib pa kouryèl
+        (modpas, enfòmasyon konplè sou kont labank, elatriye).
       </p>
 
-      <h2>9. Liens externes</h2>
-      <p>
-        Le Site peut contenir des liens vers des sites tiers (par exemple le
-        site du réalisateur technique). Belfond Store n'est pas responsable
-        des pratiques de confidentialité de ces sites externes.
+      <h2 data-i18n="conf.h9">9. Lyen deyò</h2>
+      <p data-i18n="conf.p9">
+        Sit la kapab gen lyen ki mennen sou sit lòt moun (pa egzanp sit
+        reyalizatè teknik la). Belfond Store pa responsab pratik
+        konfidansyalite sit deyò sa yo.
       </p>
 
-      <h2>10. Modifications de la présente politique</h2>
-      <p>
-        La présente politique peut être mise à jour pour refléter
-        l'évolution du Site ou des obligations légales. La date de dernière
-        mise à jour figure en haut de cette page.
+      <h2 data-i18n="conf.h10">10. Modifikasyon politik sa a</h2>
+      <p data-i18n="conf.p10">
+        Politik sa a kapab chanje pou l reflete evolisyon Sit la oswa
+        obligasyon legal yo. Dat dènye mizajou a parèt anwo paj la.
       </p>
 
       <div class="encadre">
-        <p><strong>Contact — protection des données :</strong><br>
-        Mme Esterlande Belfond — Belfond Store<br>
-        Christ-Roi, Rue Lamartine #13A, Port-au-Prince, Haïti<br>
+        <p data-i18n-html="conf.encfin"><strong>Kontak — pwoteksyon done :</strong><br>
+        Madan Esterlande Belfond — Belfond Store<br>
+        Christ-Roi, Ri Lamartine #13A, Pòtoprens, Ayiti<br>
         <a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a></p>
       </div>
     </div>
@@ -149,32 +169,34 @@
       <div class="pied-grille">
         <div>
           <h4>Belfond Store</h4>
-          <p>Boutique de quartier à Christ-Roi, Rue Lamartine #13A, Port-au-Prince, Haïti. Des produits du quotidien, une sélection de qualité, un accueil chaleureux.</p>
+          <p data-i18n="pied.desc">Boutik katye nan Christ-Roi, Ri Lamartine #13A, Pòtoprens, Ayiti. Pwodwi pou chak jou, yon seleksyon kalite, yon akèy cho.</p>
         </div>
         <div>
-          <h4>Navigation</h4>
+          <h4 data-i18n="pied.nav">Navigasyon</h4>
           <ul>
-            <li><a href="index.html#boutique">Notre boutique</a></li>
-            <li><a href="index.html#produits">Nos produits</a></li>
-            <li><a href="index.html#proprietaire">La propriétaire</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#boutique" data-i18n="nav.boutique">Boutik nou an</a></li>
+            <li><a href="index.html#produits" data-i18n="nav.produits">Pwodwi nou yo</a></li>
+            <li><a href="index.html#proprietaire" data-i18n="nav.proprio">Pwopriyetè a</a></li>
+            <li><a href="index.html#contact" data-i18n="nav.contact">Kontak</a></li>
           </ul>
         </div>
         <div>
-          <h4>Informations légales</h4>
+          <h4 data-i18n="pied.legal">Enfòmasyon legal</h4>
           <ul>
-            <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
-            <li><a href="propriete-intellectuelle.html">Propriété intellectuelle</a></li>
+            <li><a href="politique-confidentialite.html" data-i18n="pied.conf">Politik konfidansyalite</a></li>
+            <li><a href="propriete-intellectuelle.html" data-i18n="pied.pi">Pwopriyete entelektyèl</a></li>
             <li><a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a></li>
           </ul>
         </div>
       </div>
       <div class="pied-bas">
-        <span>© 2026 Esterlande Belfond — Belfond Store. Tous droits réservés.</span>
-        <span class="realisation">Site réalisé par <a href="https://lesly-tech-llc.onrender.com" target="_blank" rel="noopener">Lesly Tech LLC</a></span>
+        <span data-i18n="pied.droits">© 2026 Esterlande Belfond — Belfond Store. Tout dwa rezève.</span>
+        <span class="realisation" data-i18n-html="pied.realis">Sit la se travay <a href="https://lesly-tech-llc.onrender.com" target="_blank" rel="noopener">Lesly Tech LLC</a></span>
       </div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
