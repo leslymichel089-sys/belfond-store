@@ -67,7 +67,7 @@
       }
       if (elHeure) {
         elHeure.textContent = new Intl.DateTimeFormat(localeActive(), {
-          timeZone: FUSEAU, hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false
+          timeZone: FUSEAU, hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true
         }).format(now);
       }
     } catch (e) {
