@@ -39,14 +39,31 @@
     return (window.BelfondI18n && BelfondI18n.getLang() === "fr") ? "fr-FR" : "ht";
   }
 
+  /* Chrome ne connaît pas la locale « ht » pour Intl : on compose la date
+     créole à la main pour éviter le repli en anglais. */
+  var JOURS_HT = { Monday: "Lendi", Tuesday: "Madi", Wednesday: "Mèkredi", Thursday: "Jedi", Friday: "Vandredi", Saturday: "Samdi", Sunday: "Dimanch" };
+  var MOIS_HT = ["Janvye", "Fevriye", "Mas", "Avril", "Me", "Jen", "Jiyè", "Out", "Septanm", "Oktòb", "Novanm", "Desanm"];
+
+  function dateKreyol(now) {
+    var p = {};
+    new Intl.DateTimeFormat("en-US", {
+      timeZone: FUSEAU, weekday: "long", day: "numeric", month: "numeric", year: "numeric"
+    }).formatToParts(now).forEach(function (x) { p[x.type] = x.value; });
+    return (JOURS_HT[p.weekday] || p.weekday) + " " + p.day + " " + MOIS_HT[parseInt(p.month, 10) - 1] + " " + p.year;
+  }
+
   function majHorloge() {
     var now = new Date();
     try {
       if (elDate) {
-        var dateTxt = new Intl.DateTimeFormat(localeActive(), {
-          timeZone: FUSEAU, weekday: "long", day: "numeric", month: "long", year: "numeric"
-        }).format(now);
-        elDate.textContent = dateTxt.charAt(0).toUpperCase() + dateTxt.slice(1);
+        if (localeActive() === "ht") {
+          elDate.textContent = dateKreyol(now);
+        } else {
+          var dateTxt = new Intl.DateTimeFormat("fr-FR", {
+            timeZone: FUSEAU, weekday: "long", day: "numeric", month: "long", year: "numeric"
+          }).format(now);
+          elDate.textContent = dateTxt.charAt(0).toUpperCase() + dateTxt.slice(1);
+        }
       }
       if (elHeure) {
         elHeure.textContent = new Intl.DateTimeFormat(localeActive(), {
