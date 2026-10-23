@@ -370,3 +370,7 @@ const BelfondI18n = (function () {
 
   return { getLang: getLang, apply: apply, dict: function () { return I18N[lang]; } };
 })();
+
+/* Exposition explicite : un « const » de niveau supérieur ne crée pas de
+   propriété window — app.js détecte la langue via window.BelfondI18n. */
+window.BelfondI18n = BelfondI18n;
