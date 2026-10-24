@@ -3,7 +3,7 @@
 Site vitrine officiel de **Belfond Store**, boutique de Mme **Esterlande Belfond**
 à Christ-Roi, Rue Lamartine #13A, Port-au-Prince, Haïti.
 
-- Contact : esterlandbelfond3@gmail.com
+- Contact : esterlandebelfond3@gmail.com
 - © 2026 Esterlande Belfond — Belfond Store. Tous droits réservés.
 - Réalisation technique : Lesly Tech LLC.
 

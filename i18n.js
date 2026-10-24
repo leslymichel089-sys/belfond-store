@@ -89,10 +89,10 @@ const I18N = {
     "conf.maj": "Dènye mizajou : 22 oktòb 2026",
     "conf.intro": `Politik konfidansyalite sa a dekri ki jan <strong>Belfond Store</strong> (Christ-Roi, Ri Lamartine #13A, Pòtoprens, Ayiti), ke pwopriyetè li <strong>Madan Esterlande Belfond</strong> reprezante, trete enfòmasyon ki konsène vizitè sit wèb li a (ki pral rele « Sit la »). Lè w itilize Sit la, ou dakò ak pratik ki dekri anba yo.`,
     "conf.h1": "1. Responsab tretman an",
-    "conf.p1": `Responsab tretman done yo se Madan Esterlande Belfond, pwopriyetè Belfond Store. Pou nenpòt kesyon sou politik sa a oswa sou done pèsonèl ou, ou ka ekri l nan adrès sa a : <a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a>.`,
+    "conf.p1": `Responsab tretman done yo se Madan Esterlande Belfond, pwopriyetè Belfond Store. Pou nenpòt kesyon sou politik sa a oswa sou done pèsonèl ou, ou ka ekri l nan adrès sa a : <a href="mailto:esterlandebelfond3@gmail.com">esterlandebelfond3@gmail.com</a>.`,
     "conf.h2": "2. Done nou kolekte",
     "conf.p2": "Sit la se yon sit vitrin : li pa gen kont itilizatè, ni panyen acha, ni fòmilè enskripsyon. Kidonk, nou kolekte trè piti done :",
-    "conf.li2a": `<strong>Korespondans pa kouryèl.</strong> Lè w ekri nou nan adrès esterlandbelfond3@gmail.com, nou resevwa adrès kouryèl ou ansanm ak sa ki nan mesaj ou a (non w si w mansyone l, demann ou, elatriye).`,
+    "conf.li2a": `<strong>Korespondans pa kouryèl.</strong> Lè w ekri nou nan adrès esterlandebelfond3@gmail.com, nou resevwa adrès kouryèl ou ansanm ak sa ki nan mesaj ou a (non w si w mansyone l, demann ou, elatriye).`,
     "conf.li2b": `<strong>Done teknik navigasyon.</strong> Menm jan ak tout sit wèb, ebèjè Sit la kapab anrejistre otomatikman enfòmasyon teknik (adrès IP, tip navigatè, paj ou vizite, dat ak lè vizit la) nan jounal sèvè, pou sekirite epi pou estatistik vizit anonim.`,
     "conf.p2b": "Nou pa kolekte okenn done labank, okenn modpas epi okenn done sansib atravè Sit la.",
     "conf.h3": "3. Ki jan nou itilize done w yo",
@@ -112,14 +112,14 @@ const I18N = {
     "conf.li7b": "dwa retifikasyon : fè korije done ki pa egzak ;",
     "conf.li7c": "dwa efasman : mande pou yo efase done w yo ak kouryèl ou yo ;",
     "conf.li7d": "dwa opozisyon : opoze w ak nenpòt tretman done w yo.",
-    "conf.p7b": `Pou w egzèse dwa sa yo, ekri senpleman nan <a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a>. N ap reponn ou nan pi bon delè.`,
+    "conf.p7b": `Pou w egzèse dwa sa yo, ekri senpleman nan <a href="mailto:esterlandebelfond3@gmail.com">esterlandebelfond3@gmail.com</a>. N ap reponn ou nan pi bon delè.`,
     "conf.h8": "8. Sekirite",
     "conf.p8": "Nou mete mezi rezonab an plas pou pwoteje enfòmasyon nou resevwa yo. Sepandan, kòm okenn transmisyon sou Entènèt pa konplètman san ris, nou envite w pa janm voye enfòmasyon ki trè sansib pa kouryèl (modpas, enfòmasyon konplè sou kont labank, elatriye).",
     "conf.h9": "9. Lyen deyò",
     "conf.p9": "Sit la kapab gen lyen ki mennen sou sit lòt moun (pa egzanp sit reyalizatè teknik la). Belfond Store pa responsab pratik konfidansyalite sit deyò sa yo.",
     "conf.h10": "10. Modifikasyon politik sa a",
     "conf.p10": "Politik sa a kapab chanje pou l reflete evolisyon Sit la oswa obligasyon legal yo. Dat dènye mizajou a parèt anwo paj la.",
-    "conf.encfin": `<strong>Kontak — pwoteksyon done :</strong><br>Madan Esterlande Belfond — Belfond Store<br>Christ-Roi, Ri Lamartine #13A, Pòtoprens, Ayiti<br><a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a>`,
+    "conf.encfin": `<strong>Kontak — pwoteksyon done :</strong><br>Madan Esterlande Belfond — Belfond Store<br>Christ-Roi, Ri Lamartine #13A, Pòtoprens, Ayiti<br><a href="mailto:esterlandebelfond3@gmail.com">esterlandebelfond3@gmail.com</a>`,
 
     /* ----- Pwopriyete entelektyèl ----- */
     "pi.titre": "Deklarasyon pwopriyete entelektyèl nimerik",
@@ -143,14 +143,14 @@ const I18N = {
     "pi.li3d": "retire oswa reyitilize kontni sit la yon jan sistematik (kopi otomatik, « scraping ») ;",
     "pi.li3e": "modifye, adapte oswa kreye zèv ki soti nan kontni pwoteje yo.",
     "pi.h4": "4. Sa ki otorize",
-    "pi.p4": `Ou gen dwa gade sit la pou itilizasyon pèsonèl ou sèlman, epitou pataje lyen (URL) paj sit la. Nenpòt lòt itilizasyon, sitou itilizasyon komèsyal, mande yon otorizasyon ekri davans, pou w mande nan : <a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a>.`,
+    "pi.p4": `Ou gen dwa gade sit la pou itilizasyon pèsonèl ou sèlman, epitou pataje lyen (URL) paj sit la. Nenpòt lòt itilizasyon, sitou itilizasyon komèsyal, mande yon otorizasyon ekri davans, pou w mande nan : <a href="mailto:esterlandebelfond3@gmail.com">esterlandebelfond3@gmail.com</a>.`,
     "pi.h5": "5. Reyalizasyon teknik",
     "pi.p5": "Se Lesly Tech LLC ki te konsevwa epi reyalize sit la pou kont Madan Esterlande Belfond. Reyalizasyon teknik sa a pa bay Lesly Tech LLC okenn dwa pwopriyete sou kontni sit la, ki rete pwopriyete sèlman Madan Esterlande Belfond. Mansyon « Sit la se travay Lesly Tech LLC » a parèt anba paj yo kòm atribisyon reyalizasyon an.",
     "pi.h6": "6. Siyale yon vyolasyon dwa",
-    "pi.p6": `Si w wè yon repwodiksyon kontni sit la ki pa otorize, oswa si w panse yon kontni sou sit la vyole pwòp dwa w, tanpri siyale l nan adrès sa a : <a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a>, epi presize URL ki konsène a ak nati vyolasyon w ap pale a. N ap egzamine epi trete tout sinyalman ki fèt ak bòn fwa nan pi bon delè.`,
+    "pi.p6": `Si w wè yon repwodiksyon kontni sit la ki pa otorize, oswa si w panse yon kontni sou sit la vyole pwòp dwa w, tanpri siyale l nan adrès sa a : <a href="mailto:esterlandebelfond3@gmail.com">esterlandebelfond3@gmail.com</a>, epi presize URL ki konsène a ak nati vyolasyon w ap pale a. N ap egzamine epi trete tout sinyalman ki fèt ak bòn fwa nan pi bon delè.`,
     "pi.h7": "7. Sanksyon",
     "pi.p7": "Nenpòt itilizasyon kontni pwoteje yo ki pa otorize kapab mennen pousuit selon lwa ki anvigè yo, san sa pa anpeche yo reklame domaj ak enterè.",
-    "pi.encfin": `<strong>Moun ki gen dwa yo :</strong><br>Madan Esterlande Belfond — Belfond Store<br>Christ-Roi, Ri Lamartine #13A, Pòtoprens, Ayiti<br><a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a><br>© Esterlande Belfond 2026. Tout dwa rezève.`
+    "pi.encfin": `<strong>Moun ki gen dwa yo :</strong><br>Madan Esterlande Belfond — Belfond Store<br>Christ-Roi, Ri Lamartine #13A, Pòtoprens, Ayiti<br><a href="mailto:esterlandebelfond3@gmail.com">esterlandebelfond3@gmail.com</a><br>© Esterlande Belfond 2026. Tout dwa rezève.`
   },
 
   fr: {
@@ -237,10 +237,10 @@ const I18N = {
     "conf.maj": "Dernière mise à jour : 22 octobre 2026",
     "conf.intro": `La présente politique de confidentialité décrit la manière dont <strong>Belfond Store</strong> (Christ-Roi, Rue Lamartine #13A, Port-au-Prince, Haïti), représentée par sa propriétaire <strong>Mme Esterlande Belfond</strong>, traite les informations relatives aux visiteurs de son site web (ci-après « le Site »). En utilisant le Site, vous acceptez les pratiques décrites ci-dessous.`,
     "conf.h1": "1. Responsable du traitement",
-    "conf.p1": `La responsable du traitement des données est Mme Esterlande Belfond, propriétaire de Belfond Store. Pour toute question relative à la présente politique ou à vos données personnelles, vous pouvez la contacter à l'adresse suivante : <a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a>.`,
+    "conf.p1": `La responsable du traitement des données est Mme Esterlande Belfond, propriétaire de Belfond Store. Pour toute question relative à la présente politique ou à vos données personnelles, vous pouvez la contacter à l'adresse suivante : <a href="mailto:esterlandebelfond3@gmail.com">esterlandebelfond3@gmail.com</a>.`,
     "conf.h2": "2. Données que nous collectons",
     "conf.p2": "Le Site est un site vitrine : il ne comporte ni compte utilisateur, ni panier d'achat, ni formulaire d'inscription. En conséquence, nous collectons très peu de données :",
-    "conf.li2a": `<strong>Correspondances par courriel.</strong> Lorsque vous nous écrivez à l'adresse esterlandbelfond3@gmail.com, nous recevons votre adresse courriel ainsi que le contenu de votre message (votre nom si vous le mentionnez, votre demande, etc.).`,
+    "conf.li2a": `<strong>Correspondances par courriel.</strong> Lorsque vous nous écrivez à l'adresse esterlandebelfond3@gmail.com, nous recevons votre adresse courriel ainsi que le contenu de votre message (votre nom si vous le mentionnez, votre demande, etc.).`,
     "conf.li2b": `<strong>Données techniques de navigation.</strong> Comme tout site web, l'hébergeur du Site peut enregistrer automatiquement des informations techniques (adresse IP, type de navigateur, pages consultées, date et heure de visite) dans des journaux de serveur, à des fins de sécurité et de statistiques de fréquentation anonymes.`,
     "conf.p2b": "Nous ne collectons aucune donnée bancaire, aucun mot de passe et aucune donnée sensible par l'intermédiaire du Site.",
     "conf.h3": "3. Utilisation de vos données",
@@ -260,14 +260,14 @@ const I18N = {
     "conf.li7b": "droit de rectification : faire corriger des données inexactes ;",
     "conf.li7c": "droit à l'effacement : demander la suppression de vos données et de vos courriels ;",
     "conf.li7d": "droit d'opposition : vous opposer à tout traitement de vos données.",
-    "conf.p7b": `Pour exercer ces droits, écrivez simplement à <a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a>. Nous répondrons dans les meilleurs délais.`,
+    "conf.p7b": `Pour exercer ces droits, écrivez simplement à <a href="mailto:esterlandebelfond3@gmail.com">esterlandebelfond3@gmail.com</a>. Nous répondrons dans les meilleurs délais.`,
     "conf.h8": "8. Sécurité",
     "conf.p8": "Nous mettons en œuvre des mesures raisonnables pour protéger les informations reçues. Toutefois, aucune transmission par Internet n'étant totalement exempte de risques, nous vous invitons à ne jamais transmettre par courriel d'informations hautement sensibles (mots de passe, coordonnées bancaires complètes, etc.).",
     "conf.h9": "9. Liens externes",
     "conf.p9": "Le Site peut contenir des liens vers des sites tiers (par exemple le site du réalisateur technique). Belfond Store n'est pas responsable des pratiques de confidentialité de ces sites externes.",
     "conf.h10": "10. Modifications de la présente politique",
     "conf.p10": "La présente politique peut être mise à jour pour refléter l'évolution du Site ou des obligations légales. La date de dernière mise à jour figure en haut de cette page.",
-    "conf.encfin": `<strong>Contact — protection des données :</strong><br>Mme Esterlande Belfond — Belfond Store<br>Christ-Roi, Rue Lamartine #13A, Port-au-Prince, Haïti<br><a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a>`,
+    "conf.encfin": `<strong>Contact — protection des données :</strong><br>Mme Esterlande Belfond — Belfond Store<br>Christ-Roi, Rue Lamartine #13A, Port-au-Prince, Haïti<br><a href="mailto:esterlandebelfond3@gmail.com">esterlandebelfond3@gmail.com</a>`,
 
     /* ----- Propriété intellectuelle ----- */
     "pi.titre": "Déclaration de propriété intellectuelle numérique",
@@ -291,14 +291,14 @@ const I18N = {
     "pi.li3d": "extraire ou réutiliser de manière systématique les contenus du site (copie automatisée, « scraping ») ;",
     "pi.li3e": "modifier, adapter ou créer des œuvres dérivées à partir des contenus protégés.",
     "pi.h4": "4. Utilisations autorisées",
-    "pi.p4": `La consultation du site à des fins strictement personnelles et le partage du lien (URL) des pages du site sont autorisés. Toute autre utilisation, en particulier commerciale, requiert une autorisation écrite préalable, à demander à : <a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a>.`,
+    "pi.p4": `La consultation du site à des fins strictement personnelles et le partage du lien (URL) des pages du site sont autorisés. Toute autre utilisation, en particulier commerciale, requiert une autorisation écrite préalable, à demander à : <a href="mailto:esterlandebelfond3@gmail.com">esterlandebelfond3@gmail.com</a>.`,
     "pi.h5": "5. Réalisation technique",
     "pi.p5": "Le site a été conçu et réalisé par Lesly Tech LLC pour le compte de Mme Esterlande Belfond. Cette réalisation technique ne confère à Lesly Tech LLC aucun droit de propriété sur les contenus du site, lesquels demeurent la propriété exclusive de Mme Esterlande Belfond. La mention « Site réalisé par Lesly Tech LLC » figure au pied des pages à titre d'attribution de la réalisation.",
     "pi.h6": "6. Signalement d'une atteinte aux droits",
-    "pi.p6": `Si vous constatez une reproduction non autorisée des contenus du site, ou si vous estimez qu'un contenu du site porte atteinte à vos propres droits, merci de le signaler à l'adresse suivante : <a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a>, en précisant l'URL concernée et la nature de l'atteinte alléguée. Tout signalement de bonne foi sera examiné et traité dans les meilleurs délais.`,
+    "pi.p6": `Si vous constatez une reproduction non autorisée des contenus du site, ou si vous estimez qu'un contenu du site porte atteinte à vos propres droits, merci de le signaler à l'adresse suivante : <a href="mailto:esterlandebelfond3@gmail.com">esterlandebelfond3@gmail.com</a>, en précisant l'URL concernée et la nature de l'atteinte alléguée. Tout signalement de bonne foi sera examiné et traité dans les meilleurs délais.`,
     "pi.h7": "7. Sanctions",
     "pi.p7": "Toute utilisation non autorisée des contenus protégés pourra faire l'objet de poursuites conformément aux lois en vigueur, sans préjudice des dommages et intérêts susceptibles d'être réclamés.",
-    "pi.encfin": `<strong>Titulaire des droits :</strong><br>Mme Esterlande Belfond — Belfond Store<br>Christ-Roi, Rue Lamartine #13A, Port-au-Prince, Haïti<br><a href="mailto:esterlandbelfond3@gmail.com">esterlandbelfond3@gmail.com</a><br>© Esterlande Belfond 2026. Tous droits réservés.`
+    "pi.encfin": `<strong>Titulaire des droits :</strong><br>Mme Esterlande Belfond — Belfond Store<br>Christ-Roi, Rue Lamartine #13A, Port-au-Prince, Haïti<br><a href="mailto:esterlandebelfond3@gmail.com">esterlandebelfond3@gmail.com</a><br>© Esterlande Belfond 2026. Tous droits réservés.`
   }
 };
 
